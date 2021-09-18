@@ -20,4 +20,6 @@
     <string name="datetime_format">HH:mm:ss.SSS</string>
     <string name="clear">Clear</string>
     <string name="goBackBtn">Back to WiFi</string>
+    <string name="go_back">go back</string>
+    <string name="config">config</string>
 </resources>

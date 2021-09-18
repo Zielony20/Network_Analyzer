@@ -67,7 +67,6 @@ class PingUtil : AppCompatActivity() {
             params.interval = intervalText.text.toString().toDouble()
             params.count = countText.text.toString().toInt()
 
-            syncServerText()
         }
         builder.show()
     }
@@ -225,15 +224,14 @@ class PingUtil : AppCompatActivity() {
         tableLayout.addView(headerRow)
     }
 
-    private fun syncServerText() {
-        settingsButton.text = params.server
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ping_main)
+        supportActionBar?.hide()
 
-        syncServerText()
+
         initTableView()
 
         clearButton.setOnClickListener {

@@ -11,30 +11,36 @@
             android:text="@string/label_timestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/tvTimestamp" android:layout_weight="1"
-            app:autoSizeTextType="uniform"/>
+            app:autoSizeTextType="uniform"
+            android:textColor="@android:color/white"/>
     <TextView
             android:text="@string/label_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/tvSize" android:layout_weight="1"
-            app:autoSizeTextType="uniform"/>
+            app:autoSizeTextType="uniform"
+        android:textColor="@android:color/white"/>
     <TextView
             android:text="@string/label_target"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/tvTarget" android:layout_weight="1"
-            app:autoSizeTextType="uniform"/>
+            app:autoSizeTextType="uniform"
+        android:textColor="@android:color/white"/>
     <TextView
             android:text="@string/label_sequence_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/tvSeqN" android:layout_weight="1"
-            app:autoSizeTextType="uniform"/>
+            app:autoSizeTextType="uniform"
+        android:textColor="@android:color/white"/>
     <TextView
             android:text="@string/label_ttl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/tvTtl" android:layout_weight="1"
-            app:autoSizeTextType="uniform"/>
+            app:autoSizeTextType="uniform"
+        android:textColor="@android:color/white"/>
     <TextView
             android:text="@string/label_rtt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/tvRtt" android:layout_weight="1"
-            app:autoSizeTextType="uniform"/>
+            app:autoSizeTextType="uniform"
+        android:textColor="@android:color/white"/>
 </TableRow>

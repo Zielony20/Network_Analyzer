@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
     <GridLayout
         app:layout_constraintTop_toTopOf="parent"
@@ -17,25 +18,47 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        >
+        android:layout_marginTop="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/settingsButton"
+                android:text="@string/config"
+                android:textSize="11sp"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:layout_marginHorizontal="5dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:text="@string/btn_start"
+                android:id="@+id/pingButton"
+                android:backgroundTint="@android:color/holo_blue_light" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:text="@string/clear"
+                android:id="@+id/clearButton"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:layout_marginHorizontal="5dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:text="@string/go_back"
+                android:id="@+id/goBackButton"
+                android:backgroundTint="@android:color/holo_blue_light" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/settingsButton"
-            android:text="@string/settingsButton"
-            android:textSize="12sp" />
-        <Button
-            android:textSize="12sp"
-            android:text="@string/btn_start"
-            android:id="@+id/pingButton" />
-        <Button
-            android:textSize="12sp"
-            android:text="@string/clear"
-            android:id="@+id/clearButton" />
-        <Button
-            android:textSize="12sp"
-            android:text="@string/goBackBtn"
-            android:id="@+id/goBackButton" />
     </GridLayout>
     <ScrollView
         android:layout_width="0dp"

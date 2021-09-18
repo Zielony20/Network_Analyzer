@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        supportActionBar?.hide()
         val layoutDisconnected = findViewById<LinearLayout>(R.id.layoutDisconnected)
         val layoutCellular = findViewById<LinearLayout>(R.id.layoutCellularConnected)
         val layoutWiFi = findViewById<LinearLayout>(R.id.layoutWiFiConnected)
