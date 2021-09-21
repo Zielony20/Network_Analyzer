@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -28,8 +29,8 @@ class MainActivity : AppCompatActivity() {
 
     private var currentX: Double = 0.0
 
+    @RequiresApi(Build.VERSION_CODES.O)
     @SuppressLint("MissingPermission")
-    @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -86,10 +87,10 @@ class MainActivity : AppCompatActivity() {
                                     series.resetData(values)
                                     graph.onDataChanged(true, true)
                                 } else series = LineGraphSeries()
-
+                                series.color= Color.parseColor("#99e4ee")
                                 graph.addSeries(series)
-
                                 // customize graph
+
                                 val viewport = graph.viewport
                                 viewport.isYAxisBoundsManual = true
                                 viewport.isXAxisBoundsManual = true
@@ -119,15 +120,12 @@ class MainActivity : AppCompatActivity() {
                                 layoutWiFi.visibility = View.GONE
 
                                 val ISPname = findViewById<TextView>(R.id.CellISPname)
-                                val standard = findViewById<TextView>(R.id.CellStandard)
                                 val roaming = findViewById<TextView>(R.id.CellRoaming)
                                 val activity = findViewById<TextView>(R.id.CellDataActivity)
                                 val concurentTransfer =
                                     findViewById<TextView>(R.id.CellConcurentVoice_Data)
 
                                 ISPname.text = "Operator: ${CellParameters!!.networkOperatorName}"
-                                standard.text =
-                                    "Network: ${dataNetworkType(CellParameters.dataNetworkType)}"
                                 roaming.text =
                                     "Roaming: ${roaming(CellParameters.isNetworkRoaming)}"
                                 activity.text = dataActivity(CellParameters.dataActivity)
@@ -175,30 +173,6 @@ class MainActivity : AppCompatActivity() {
         else "Not in use"
     }
 
-    private fun dataNetworkType(dataNetworkType: Int): CharSequence? {
-        return when(dataNetworkType){
-            1 -> "GPRS"
-            2 -> "EDGE"
-            3 -> "UMTS"
-            4 -> "CDMA (IS95A or IS95B)"
-            5 -> "EVDO revision 0"
-            6 -> " EVDO revision A"
-            7 -> "1xRTT"
-            8 -> "HSDPA"
-            9 -> "HSUPA"
-            10 -> "HSPA"
-            11 -> "IDEN"
-            12 -> "EVDO revision B"
-            13 -> "LTE"
-            14 -> "eHRPD"
-            15 -> "HSPA+"
-            16 -> "GSM"
-            17 -> "TD_SCDMA"
-            18 -> "IWLAN"
-            20 -> "NR 5G (New Radio)"
-            else -> "Unknown"
-        }
-    }
 
     private fun concurentTransmission(concurrentVoiceAndDataSupported: Boolean): CharSequence? {
         return if(concurrentVoiceAndDataSupported) "Supported!"

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jozek/StudioProjects/Network_Analyzer/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19947916666666668" />
         <entry key="app/src/main/res/layout/ping_main.xml" value="0.35833333333333334" />
         <entry key="app/src/main/res/layout/result_row.xml" value="0.35833333333333334" />
